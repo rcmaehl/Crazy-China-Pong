@@ -20,7 +20,7 @@ def getname(background=0,namecolor=(0,0,0),helptext="What is your name?",helptex
     clock = pygame.time.Clock()
     pygame.init()
     if not surface:
-        print "You need to supply namelib with a surface"
+        print("You need to supply namelib with a surface")
         sys.exit(1)
     namefont = pygame.font.Font(font, 30)
     helptextfont = pygame.font.Font(font, 30)
