@@ -38,20 +38,20 @@ for argument in sys.argv:
     if argument == "--novideo":
         skipvid = True
     if argument == "--version" or argument == "-v":
-        print "Crazy China Pong version "+version
+        print("Crazy China Pong version "+version)
         if argument == sys.argv[-1]:
             sys.exit()
         else:
             pass
     if argument == "--credits":
-        print "Crazy China Pong "+version+" Credits:\n\n"+\
+        print("Crazy China Pong "+version+" Credits:\n\n"+\
             " " +"#"*40+"\n"+\
             " # Coding            : SmartViking"+" "*6+"#"+"\n"+" #"+" "*21+"Staticsafe"+" "*7+"#"+"\n"+" #"+" "*21+"Robert Maehl"+" "*5+"#"+"\n"+\
             " #"+"-"*38+"#\n"+\
             " # All Music         : Kris Occhipinti  #\n"+\
             " #"+"-"*38+"#\n"+\
             " # Artwork           : SmartViking      #\n"+\
-            " "+"#"*40
+            " "+"#"*40)
         if argument == sys.argv[-1]:
             sys.exit()
         else:
@@ -66,7 +66,7 @@ for argument in sys.argv:
     if argument == "--fullscreen" or argument == "-f":
         fullscreen = 1
     if argument not in argumentlist and argument != sys.argv[0]:
-        print "Unknown argument: "+argument
+        print("Unknown argument: "+argument)
         sys.exit(1)
 
 pygame.mixer.pre_init()
@@ -121,7 +121,7 @@ def textsomething(surface,color,text,size,w,h):
     surface.blit(textthing,(w,h))
     return size
 
-whichsong = random.choice(range(10,40,10))
+whichsong = random.choice(list(range(10,40,10)))
 music(whichsong)
 
 def main(fullscreen,startup=0,songnumber=10):
@@ -479,7 +479,7 @@ def main(fullscreen,startup=0,songnumber=10):
                         screen.blit(gun,(30,gunh))
                         stopten = 0
                         heightheight = 60
-                        for i in sorted(playerscore.keys(), reverse=True):
+                        for i in sorted(list(playerscore.keys()), reverse=True):
                             stopten += 1
                             textplayers = endscorefont.render(playerscore[i], True, (44,44,44))
                             screen.blit(textplayers,(50,heightheight))
@@ -515,17 +515,17 @@ def main(fullscreen,startup=0,songnumber=10):
         #Freeze ball
         randomball = random.randint(1,1000)
         if not balls and not freeze and randomball == 399:
-            ballw = random.choice(range(100,750,50))
+            ballw = random.choice(list(range(100,750,50)))
             balls = 1
         #Bonus
         randombonus = random.randint(1,1000)
         if not bonusactive and randombonus == 99:
-            bonush = random.choice(range(10,590,10))
+            bonush = random.choice(list(range(10,590,10)))
             bonusactive = 1
         #Bad bonus
         randombadbonus = random.randint(1,2000)
         if not badbonusactive and randombadbonus == 199:
-            badbonush = random.choice(range(5,585,10))
+            badbonush = random.choice(list(range(5,585,10)))
             badbonusactive = 1
         #Rendering
         screen.blit(bgimg,(0,0))
