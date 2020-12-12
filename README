@@ -1,7 +1,7 @@
 This is a pong game in Python, made by SmartViking.
 
 Packages required to play (*nix users):
-python 2.x or python 3.9
+python 2.7.18 or python 3.9
 python2-pygame or python-pygame
 
 WINDOWS USERS:
@@ -11,8 +11,8 @@ MAC USERS:
 You should already have Python installed, just download a version of python-pygame - http://pygame.org/download.shtml
 
 Testing done:
-- Tested with python 2.6, 2.7 and 3.9
-- Tested with pygame 1.8.1, 1.9.1 and 2.0.0
+- Tested with python 2.7.18 and 3.9.0
+- Tested with pygame 1.9.6 and 2.0.0
 - Tested with Arch Linux, Debian 6, Fedora 15 and Ubuntu, should work for all.
 - Tested on Windows 7 x64, with Python 2.7 x64 with pygame 1.9.2 pre. 
 - Tested on latest OS X with python 2.6 and pygame 1.9.2 pre
